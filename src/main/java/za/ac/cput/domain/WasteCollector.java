@@ -54,19 +54,19 @@ public class WasteCollector
         private long contactNumber;
         private  String assignedArea ;
 
-        public Builder getCollectorId(String collectorId){
+        public Builder CollectorId(String collectorId){
           this.collectorId =  collectorId;
           return this;
         }
-        public Builder getName(String name){
+        public Builder Name(String name){
            this.name = name;
            return this;
         }
-        public  Builder  getContactNumber(long contactNumber){
+        public  Builder  ContactNumber(long contactNumber){
             this.contactNumber = contactNumber;
             return this;
         }
-        public Builder getAssignedArea(String assignedArea){
+        public Builder AssignedArea(String assignedArea){
             this.assignedArea = assignedArea;
             return this;
         }

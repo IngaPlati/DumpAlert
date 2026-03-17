@@ -64,26 +64,26 @@ public class Address
       private String city;
       private String postalCode;
 
-      public Builder getAddressId(String addressId){
+      public Builder AddressId(String addressId){
          this.addressId = addressId;
          return this;
       }
 
-      public Builder getStreetName(String streetName){
+      public Builder StreetName(String streetName){
          this.streetName= streetName;
          return this;
       }
 
-      public Builder getSuburb(String suburb){
+      public Builder Suburb(String suburb){
          this.suburb = suburb;
          return this;
       }
-      public Builder getCity(String city){
+      public Builder City(String city){
          this.city = city;
          return this;
 
       }
-      public Builder getpostalCode(String postalCode){
+      public Builder postalCode(String postalCode){
         this.postalCode= postalCode;
         return this;
 
