@@ -17,7 +17,7 @@ public class AvailabilitySlot {
 
     private AvailabilitySlot() {}
 
-    private AvailabilitySlot(Builder builder) {
+    public AvailabilitySlot(Builder builder) {
         this.slotId = builder.slotId;
         this.date = builder.date;
         this.startTime = builder.startTime;

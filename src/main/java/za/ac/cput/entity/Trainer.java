@@ -11,7 +11,7 @@ public class Trainer {
     private UserProfile profile;
     private  ContactDetails contactDetails;
 
-    private Trainer(Builder builder) {
+    public Trainer(Builder builder) {
         this.trainerId = builder.trainerId;
         this.account = builder.account;
         this.profile = builder.profile;
