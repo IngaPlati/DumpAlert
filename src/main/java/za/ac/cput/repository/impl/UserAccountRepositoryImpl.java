@@ -5,6 +5,7 @@ package za.ac.cput.repository.impl;
         26 March 2026
         */
 import za.ac.cput.entity.UserAccount;
+import za.ac.cput.entity.UserProfile;
 import za.ac.cput.repository.UserAccountRepository;
 
 import java.util.ArrayList;
@@ -32,13 +33,10 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
 
     @Override
     public UserAccount read(String id) {
-        return userAccountMap.get(id);
+         return userAccountMap.get(id);
     }
 
-    @Override
-    public List<UserAccount> findAll() {
-        return new ArrayList<>(userAccountMap.values());
-    }
+
     @Override
     public UserAccount update(UserAccount userAccount) {
         if(userAccountMap.containsKey(userAccount.getAccountId())){
@@ -49,8 +47,11 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
 
     @Override
     public boolean delete(String id) {
-        return userAccountMap.remove(id) != null;
+         return userAccountMap.remove(id) != null;
     }
 
-
+    @Override
+    public List<UserAccount> getAll() {
+         return new ArrayList<>(userAccountMap.values());
+    }
 }

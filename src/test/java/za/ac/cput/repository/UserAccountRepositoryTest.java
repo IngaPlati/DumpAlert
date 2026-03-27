@@ -133,6 +133,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
         @Test
         void testFindAll_NotNull() {
-            assertNotNull(repo.findAll());
+            assertNotNull(repo.getAll());
         }
 }

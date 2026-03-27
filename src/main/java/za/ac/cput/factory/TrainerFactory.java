@@ -3,7 +3,7 @@ import  za.ac.cput.entity.Trainer;
 import za.ac.cput.entity.ContactDetails;
 import za.ac.cput.entity.UserAccount;
 import za.ac.cput.entity.UserProfile;
-import za.ac.cput.util.helper;
+import za.ac.cput.util.Helper;
 
 import java.util.UUID;
 
@@ -17,13 +17,13 @@ import java.util.UUID;
 public class TrainerFactory {
     public static Trainer createTrainer(String trainerId,UserAccount account, UserProfile profile, ContactDetails contact) {
        trainerId = UUID.randomUUID().toString();
-        if(helper.isNullOrEmpty(trainerId))
+        if(Helper.isNullOrEmpty(trainerId))
             throw new NullPointerException("Trainer ID is required");
-        if (helper.isNullOrEmpty(String.valueOf(account)))
+        if (Helper.isNullOrEmpty(String.valueOf(account)))
             throw new NullPointerException("Account is required");
-        if (helper.isNullOrEmpty(String.valueOf(profile)))
+        if (Helper.isNullOrEmpty(String.valueOf(profile)))
             throw new NullPointerException("Profile is required");
-        if (helper.isNullOrEmpty(String.valueOf(contact)))
+        if (Helper.isNullOrEmpty(String.valueOf(contact)))
             throw new NullPointerException("Contact details is required");
 
         return new Trainer.Builder().setTrainerId(trainerId)

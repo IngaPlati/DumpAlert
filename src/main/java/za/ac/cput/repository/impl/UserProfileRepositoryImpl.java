@@ -36,15 +36,11 @@ public class UserProfileRepositoryImpl implements UserProfileRepository {
 
     @Override
     public UserProfile read(String id) {
+
         return userProfileMap.get(id);
     }
 
-    @Override
-    public List<UserProfile> findAll() {
-        return new ArrayList<>(userProfileMap.values());
-    }
-
-    @Override
+       @Override
     public UserProfile update(UserProfile userProfile) {
         if (userProfileMap.containsKey(userProfile.getProfileId())) {
             userProfileMap.put(userProfile.getProfileId(), userProfile);
@@ -54,9 +50,15 @@ public class UserProfileRepositoryImpl implements UserProfileRepository {
 
     @Override
     public boolean delete(String id) {
+
         return userProfileMap.remove(id) != null;
     }
 
+    @Override
+    public List<UserProfile> getAll() {
+
+        return new ArrayList<>(userProfileMap.values());
+    }
 
 }
 
