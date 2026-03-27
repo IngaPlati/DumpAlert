@@ -45,6 +45,16 @@ public class UserAccountRepositoryImpl implements UserAccountRepository {
     }
 
     @Override
+    public UserAccount save(UserAccount userAccount) {
+        return null;
+    }
+
+    @Override
+    public UserAccount findById(String s) {
+        return null;
+    }
+
+    @Override
     public boolean delete(String id) {
          return userAccountMap.remove(id) != null;
     }

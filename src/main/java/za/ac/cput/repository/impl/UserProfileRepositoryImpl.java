@@ -40,6 +40,16 @@ public class UserProfileRepositoryImpl implements UserProfileRepository {
     }
 
     @Override
+    public UserProfile save(UserProfile userProfile) {
+        return null;
+    }
+
+    @Override
+    public UserProfile findById(String s) {
+        return null;
+    }
+
+    @Override
     public UserProfile update(UserProfile userProfile) {
         if (userProfileMap.containsKey(userProfile.getProfileId())) {
             userProfileMap.put(userProfile.getProfileId(), userProfile);
